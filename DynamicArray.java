@@ -9,7 +9,7 @@ class DynamicArray {
 		// Random rn = new Random();
 
 		System.out
-				.print("Developed by: Barzy Yasin Karim.\n\n<--Welcome to dynamic array program--> \n\n");
+				.print("Implementing arraylist from array. \nBy: Barzy Yasin Karim.\n\n<--Welcome to dynamic array program--> \n\n");
 
 		System.out.print("* Please enter the array size: ");
 		int size = sc.nextInt();

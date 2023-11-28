@@ -1,7 +1,5 @@
 package ds.lab2;
 
-import java.util.Arrays;
-
 /**
  *
  * @author barzy

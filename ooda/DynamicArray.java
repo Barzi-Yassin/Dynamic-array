@@ -26,11 +26,11 @@ public class DynamicArray {
     void addItem(int newNum) {
         if (numOfItems == arr.length) {
             if (devShowArrayReferences) {
-                System.out.println("arr  1:  " + arr);
+                System.out.println("\narr  1:  " + arr);
             }
             growArray();
             if (devShowArrayReferences) {
-                System.out.println("arr  2:  " + arr);
+                System.out.println("arr  2:  " + arr + "\n");
             }
         }
         arr[numOfItems++] = newNum;
@@ -47,9 +47,11 @@ public class DynamicArray {
         }
         arr = temp;
         numOfGrows++;
-        System.out.println("++ Grown(" + numOfGrows + "), new Size: " + arr.length + "\n");
+        System.out.println("++ Grown(" + numOfGrows + "), new Size: " + arr.length);
         if (devShowArrayReferences) {
             System.out.println("  temp:  " + temp);
+        } else {
+            System.out.println();
         }
 //        System.out.println("");
 

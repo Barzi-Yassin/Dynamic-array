@@ -130,6 +130,7 @@ public class DynamicArray {
         return len / 2;
     }
 
+    // return first matched item.
     void search(int numToFind) {
         System.out.print("Searching for number " + numToFind + " in the array:\n  ");
 
@@ -138,14 +139,43 @@ public class DynamicArray {
             final int currentItem = arr[i];
             if (currentItem == numToFind) {
                 numIndex = i;
-//                System.out.println("" + numIndex);
-//                break;
+                break; // by uncommenting this line, it will return last matched item index.
             }
         }
 
         String result = "Number " + numToFind + " not found..!";
         if (numIndex != -1) {
             result = "Number " + numToFind + " found at arr[" + numIndex + "]";
+        }
+        System.out.println(result + "\n");
+    }
+
+    // return all indices that match as a list
+    void searchForAll(int numToFind) {
+        System.out.print("Searching for number " + numToFind + " in the array:\n  ");
+
+        // finding howmany items match to be used ass the array size.
+        int count = 0;
+        for (int i = 0; i < numOfItems; i++) {
+            final int currentItem = arr[i];
+            if (currentItem == numToFind) {
+                count++;
+            }
+        }
+
+        // adding indices to the array.
+        int[] numIndices = new int[count];
+        int nextIndex = 0;
+        for (int i = 0; i < numOfItems; i++) {
+            final int currentItem = arr[i];
+            if (currentItem == numToFind) {
+                numIndices[nextIndex++] = i;
+            }
+        }
+
+        String result = "Number " + numToFind + " not found..!";
+        if (numIndices.length != 0) {
+            result = "Number " + numToFind + " found at arr" + Arrays.toString(numIndices);
         }
         System.out.println(result + "\n");
     }

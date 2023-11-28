@@ -11,6 +11,9 @@ public class Tester {
 
         arrObject.addItem(10);
         arrObject.addItem(20);
+        arrObject.addItem(20);
+        arrObject.addItem(10);
+//        arrObject.addItem(20);
         arrObject.addItem(30);
         arrObject.addItem(40);
         arrObject.addItem(50);
@@ -38,5 +41,6 @@ public class Tester {
         arrObject.search(20);
         arrObject.search(11);
 
+        arrObject.searchForAll(20);
     }
 }
